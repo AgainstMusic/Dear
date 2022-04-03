@@ -1,0 +1,45 @@
+/* pages/we/we.wxss */
+page {
+  background-color: #ccc;
+}
+.we {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50rpx;
+}
+.we .me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.we .me .avatar {
+  width: 130rpx;
+  height: 130rpx;
+}
+.we .me .name {
+  margin-top: 10rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+}
+.we .love {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 5rpx 20rpx;
+}
+.we .mylove {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.we .mylove .avatar {
+  width: 130rpx;
+  height: 130rpx;
+}
+.we .mylove .name {
+  margin-top: 10rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+}

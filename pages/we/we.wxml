@@ -1,0 +1,30 @@
+<!--pages/we/we.wxml-->
+<view class="we">
+    <view class="me">
+      <view wx:if="{{!userInfo}}">
+        <image class="avatar" src="../../images/public/morenhuisetouxiang.png"></image>
+        <button  class="name" bindtap="getUserProfile">点击登录</button>
+      </view>
+      <view wx:else>
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        <view  class="name">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+    <image src="../../images/public/loveeach.png" class="love"></image>
+    <view class="lover"> 
+      <view wx:if="{{!loverUserInfo}}">
+        <view class="mylove">
+          <image  class="avatar" src="../../images/public/morenhuisetouxiang.png"></image>
+          <view  class="name">点击登录</view>
+        </view>
+      </view>
+      <view wx:else>
+        <image class="avatar" src="{{loverUserInfo.avatarUrl}}"></image>
+        <view  class="name">{{loverUserInfo.nickName}}</view>
+      </view>
+      
+    </view>
+    
+    
+</view>
+<button open-type="share">邀请</button>
