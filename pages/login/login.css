@@ -1,0 +1,21 @@
+/* pages/login/login.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://6368-chatting-8g0h4h1s3c781f9d-1310373617.tcb.qcloud.la/%E7%88%B1%E4%BD%A0%20%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83.png?sign=38cbb4bb67dce0b0d19a082027e8ac01&t=1650370015");
+  background-size: 100% 100%;
+}
+#login {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#login .name {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background-color: transparent;
+  border: 1rpx solid black;
+  color: black;
+}
