@@ -3,5 +3,39 @@
   "setting": {
     "compileHotReLoad": true
   },
-  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "主页",
+          "pathName": "pages/we/we",
+          "query": "open_id=oPktk5Xv8S0XHnmRA33XYNQUY2oA",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "123",
+          "pathName": "pages/we/we",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "分享页面",
+          "pathName": "pages/shar/shar",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "分享接收页面",
+          "pathName": "pages/sharAccept/sharAccept",
+          "query": "open_id=oPktk5Xv8S0XHnmRA33XYNQUY2oA",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

@@ -1,30 +1,68 @@
 <!--pages/we/we.wxml-->
+
 <view class="we">
     <view class="me">
-      <view wx:if="{{!userInfo}}">
-        <image class="avatar" src="../../images/public/morenhuisetouxiang.png"></image>
-        <button  class="name" bindtap="getUserProfile">点击登录</button>
-      </view>
-      <view wx:else>
+      <view>
         <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
         <view  class="name">{{userInfo.nickName}}</view>
       </view>
     </view>
-    <image src="../../images/public/loveeach.png" class="love"></image>
-    <view class="lover"> 
-      <view wx:if="{{!loverUserInfo}}">
-        <view class="mylove">
+    <image src="{{!loverUserInfo ? '../../images/public/loveeach.png':'../../images/public/loveeach1.png'}}" class="love"></image>
+    <view class="lover" > 
+      <view wx:if="{{!loverUserInfo}}" class="lover_">
+        <button class="mylove" open-type="share">
           <image  class="avatar" src="../../images/public/morenhuisetouxiang.png"></image>
           <view  class="name">点击登录</view>
+        </button>
+      </view>
+      <view wx:else class="lover_">
+        <view class="mylove">
+          <image class="avatar" src="{{loverUserInfo.avatarUrl}}"></image>
+          <view  class="name">{{loverUserInfo.nickName}}</view>
         </view>
       </view>
-      <view wx:else>
-        <image class="avatar" src="{{loverUserInfo.avatarUrl}}"></image>
-        <view  class="name">{{loverUserInfo.nickName}}</view>
-      </view>
-      
     </view>
-    
-    
 </view>
-<button open-type="share">邀请</button>
+<view class="content">
+  <view wx:if="{{!loverUserInfo}}" class="start_time">
+    <button class="header" plain="true" bindtap="inviteLove">开启纪念日</button>
+  </view>
+  <view wx:else>
+    <view class="time">
+      <view class="timeLove">
+        <view class="begin">始于</view>
+        <view class="beginTime">{{value}}</view>
+        <view class="textContent">一起走过了</view>
+        <view class="yearMonthWeek">
+          <view class="times">{{year}}年</view>
+          <view class="shu">|</view>
+          <view class="times">{{mouth}}月</view>
+          <view class="shu">|</view>
+          <view class="times">{{week}}周</view>
+        </view>
+        <view class="day">
+          {{day}}
+        </view>
+        <view class="hourMinute">
+          <view class="times">{{hour}}小时</view>
+          <view class="shu">|</view>
+          <view class="times">{{minute}}分钟</view>
+        </view>
+        <view class="loveQuotes">
+          <view class="textContent">落日与晚风</view>
+          <view class="textContent">朝朝又暮暮</view>
+        </view>
+        <view class="footer">
+          <view class="footer_left">
+            <date-time-picker class="timeDear" value="{{value}}" startYear="2015" endYear="2020" bind:change="handleChange">
+              设置时间
+            </date-time-picker >
+          </view>
+          <view class="footer_right">
+            <view bindtap="parted" class="leave">分开</view>
+          </view>
+        </view>
+      </view>
+    </view> 
+  </view>
+</view>

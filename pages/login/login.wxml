@@ -1,0 +1,3 @@
+<view id="login">
+  <button  class="name" bindtap="getUserProfile" open-type="getUserInfo">点击登录</button>
+</view>

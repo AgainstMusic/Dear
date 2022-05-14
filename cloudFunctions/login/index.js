@@ -17,15 +17,18 @@ exports.main = async (event, context) => {
   console.log(result);
   // 判断这个人是否存在于数据库 有的话 调用更新 没的话加入数据库
   if(result.data.length > 0) {
-    return await db.collection("daer_user").doc(result.data[0]._id).update({data: event.userInfo})
+    return result
   } else{
     return await db.collection("daer_user").add({
       data: {
         ...event.userInfo,
         open_id: openId,
         isSingle: true,
-        dear:"",//爱人的id
-        lover_id:"",//俩人生成的id
+        dear_id:"",//爱人的id
+        dear_nickName:"",//爱人的名字
+        dear_avatarUrl:"",//爱人的头像
+        lover_id:"",//俩人生成的id，love_time:
+        love_time:"",//恋爱时间
         createTime: new Date()
       },
       

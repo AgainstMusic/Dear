@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "date-time-picker": "../../components/date-time-picker/date-time-picker"
+  },
+  "navigationBarTitleText": "Dear.唯一"
 }
